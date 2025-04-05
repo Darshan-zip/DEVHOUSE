@@ -1,7 +1,7 @@
 import google.generativeai as genai
 import re
 import pandas as pd
-genai.configure(api_key="AIzaSyDgruawu1Pzyy0bCQAZC14eXP_fERrltzs")
+genai.configure(api_key={GOOGLE_API_KEY}")
 def check_sustainability(each):
         model = genai.GenerativeModel('gemini-1.5-flash')
         prompt = f"Analyze the following review for sustainability, if it contains sustainable/eco-friendly keywords . Check for positivity or negativity for the review to detect greenwashing. Also give a sustainable score based on the review in the format, Credibility Score -- _/5 : {each}"
