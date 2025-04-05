@@ -4,7 +4,7 @@ import Logo from './components/Logo';
 import CheckButton from './components/CheckButton';
 import EcoResult from './components/EcoResult';
 import { checkProductEcoFriendliness } from './services/ecoCheckService';
-import 'dist/background.js';
+
 import './App.css';
 
 function App() {
