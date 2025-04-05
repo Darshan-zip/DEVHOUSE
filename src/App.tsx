@@ -4,7 +4,8 @@ import Logo from './components/Logo';
 import CheckButton from './components/CheckButton';
 import EcoResult from './components/EcoResult';
 import { checkProductEcoFriendliness } from './services/ecoCheckService';
-
+import { Leaf, ExternalLink } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
 import './App.css';
 
 function App() {
@@ -62,6 +63,17 @@ function App() {
           />
         </div>
       )}
+      <div className="mt-auto pt-4 w-full text-center">
+        <a 
+          href="./promo-codes.html" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center text-sm text-eco-green hover:text-eco-green/80 font-medium transition-colors"
+        >
+          <ExternalLink className="mr-1 h-3 w-3" />
+          View promo codes
+        </a>
+      </div>
     </div>
   );
 }
