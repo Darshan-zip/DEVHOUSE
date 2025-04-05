@@ -5,6 +5,7 @@ import CheckButton from '@/components/CheckButton';
 import EcoResult from '@/components/EcoResult';
 import { checkProductEcoFriendliness, getCurrentTabUrl } from '@/services/ecoCheckService';
 import { Leaf } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { useToast } from "@/components/ui/use-toast";
 
 const Index = () => {
@@ -77,8 +78,20 @@ const Index = () => {
         />
       )}
 
-      <div className="mt-auto pt-4 text-center text-xs text-gray-400">
-        EcoAware Extension v1.0
+      
+      <div className="mt-auto pt-4 flex flex-col items-center gap-2">
+        <a 
+          href="./promo-codes.html" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center text-sm text-eco-green hover:text-eco-green/80 font-medium transition-colors"
+        >
+          <ExternalLink className="mr-1 h-3 w-3" />
+          View promo codes
+        </a>
+        <div className="text-xs text-gray-400">
+          EcoAware Extension v1.0
+        </div>
       </div>
     </div>
   );
